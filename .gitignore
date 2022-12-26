@@ -51,5 +51,12 @@ linux
 windows
 macos
 test
+build
+.idea
+.dart_tool
+.metadata
+.gitattributes
+analysis_options.yaml
+mi_card_flutter.iml
 
 pubspec.lock
