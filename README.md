@@ -1,6 +1,6 @@
-# mi_card_flutter
+# MyCard
 
-A new Flutter project.
+MyCard Application on Flutter.
 
 ## Getting Started
 
