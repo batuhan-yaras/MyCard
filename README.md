@@ -1,15 +1,19 @@
 # MyCard
 
-MyCard Application on Flutter.
+MyCard Application on Flutter.<br>
+### We used;<br>
+- Font Awesome Icons Library<br>
+- Source Sans Pro - ExtraLight Italic Font<br>
+- Pacifico Font<br>
 
+You can see the fonts inside of the fonts folder.<br>
+### For using Font Awesome Icons library:<br>
+- We added;<br>- font_awesome_icons: ^10.3.0<br>Under the dependencies in pubspec.yaml<br><br>
+- We imported;<br>- 'package:font_awesome_flutter/font_awesome_flutter.dart'<br>
+Inside of the main.dart file<br>
 ### Preview:
-![My Image](file:///C:/Users/Batuhan/Desktop/MyCardApp.png)
+<img src="/images/MyCardInterface.png" width = 400px>
 
-A few resources to get you started if this is your first Flutter project:
+- There is no complicated functions in this app.<br>
+- main.dart file is inside of the lib folder.<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
