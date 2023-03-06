@@ -1,112 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mi_card_flutter/core/about_text.dart';
+import 'package:mi_card_flutter/core/avatar_image.dart';
+import 'package:mi_card_flutter/core/github_card.dart';
+import 'package:mi_card_flutter/core/linkedin_card.dart';
+import 'package:mi_card_flutter/core/mail_card.dart';
+import 'package:mi_card_flutter/core/name_text.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.light().copyWith(
+          cardTheme: const CardTheme(
+        margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
+      )),
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/batuhan.jpg'),
-            ),
-            Text(
-              'Batuhan Yaras',
-              style: TextStyle(
-                fontFamily: 'Pacifico',
-                fontSize: 40.0,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'Yildiz Technical University',
-              style: TextStyle(
-                fontFamily: 'SourceSansPro',
-                fontSize: 18.0,
-                color: Colors.teal[100],
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.5,
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-              width: 250.0,
-              child: Divider(
-                color: Colors.teal.shade100,
-                thickness: 0.8,
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.email,
-                  color: Colors.teal.shade800,
-                ),
-                title: Text(
-                  'batuhanyaras@yahoo.com',
-                  style: TextStyle(
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 15.0,
-                    letterSpacing: 0.5,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.teal.shade800,
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
-              child: ListTile(
-                leading: Icon(
-                  FontAwesomeIcons.linkedin,
-                  color: Colors.teal.shade800,
-                ),
-                title: Text(
-                  'linkedin.com/in/batuhanyaras',
-                  style: TextStyle(
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 15.0,
-                    letterSpacing: 0.5,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.teal.shade800,
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
-              child: ListTile(
-                leading: Icon(
-                  FontAwesomeIcons.github,
-                  color: Colors.teal.shade800,
-                ),
-                title: Text(
-                  'https://github.com/batuhan-yaras',
-                  style: TextStyle(
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 15.0,
-                    letterSpacing: 0.5,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.teal.shade800,
-                  ),
-                ),
-              ),
-            ),
-        ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const AvatarImage(avatarRadius: 50), //CircleAvatar
+              const nameText(name: 'Batuhan Yaraş'),
+              const aboutText(about: 'Yildiz Technical University'),
+              dividerLine(),
+              const MailCard(mail: 'batuhanyaras@yahoo.com'),
+              const LinkedinCard(linkedinUrl: 'linkedin.com/in/batuhanyaras'),
+              const GithubCard(githubUrl: 'https://github.com/batuhan-yaras'),
+            ],
           ),
         ),
       ),
     );
   }
+
+  SizedBox dividerLine() {
+    return SizedBox(
+      height: 20.0,
+      width: 250.0,
+      child: Divider(
+        color: ColorsUtility().teal100,
+        thickness: 0.8,
+      ),
+    );
+  }
+}
+
+class ColorsUtility {
+  final Color? teal100 = Colors.teal[100];
+  final Color? teal800 = Colors.teal[800];
 }
