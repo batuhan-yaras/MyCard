@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class nameText extends StatelessWidget {
-  const nameText({
+class NameText extends StatelessWidget {
+  const NameText({
     Key? key,
     required this.name,
   }) : super(key: key);
