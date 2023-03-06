@@ -26,12 +26,12 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const AvatarImage(avatarRadius: 50), //CircleAvatar
-              const nameText(name: 'Batuhan Yaraş'),
-              const aboutText(about: 'Yildiz Technical University'),
+              nameText(name: AllNames().batuhanyaras),
+              aboutText(about: AllAbout().batuhanyaras),
               dividerLine(),
-              const MailCard(mail: 'batuhanyaras@yahoo.com'),
-              const LinkedinCard(linkedinUrl: 'linkedin.com/in/batuhanyaras'),
-              const GithubCard(githubUrl: 'https://github.com/batuhan-yaras'),
+              MailCard(mail: AllMails().batuhanyaras),
+              LinkedinCard(linkedinUrl: AllLinkedinUrl().batuhanyaras),
+              GithubCard(githubUrl: AllGithubUrl().batuhanyaras),
             ],
           ),
         ),
@@ -54,4 +54,24 @@ class MyApp extends StatelessWidget {
 class ColorsUtility {
   final Color? teal100 = Colors.teal[100];
   final Color? teal800 = Colors.teal[800];
+}
+
+class AllNames {
+  final String batuhanyaras = 'Batuhan Yaraş';
+}
+
+class AllAbout {
+  final String batuhanyaras = 'Yildiz Technical University';
+}
+
+class AllMails {
+  final String batuhanyaras = 'batuhanyaras@yahoo.com';
+}
+
+class AllLinkedinUrl {
+  final String batuhanyaras = 'linkedin.com/in/batuhanyaras';
+}
+
+class AllGithubUrl {
+  final String batuhanyaras = 'github.com/batuhan-yaras';
 }
