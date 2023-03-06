@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light().copyWith(
           cardTheme: const CardTheme(
-        margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
-      )),
+              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0)),
+          dividerTheme:
+              DividerThemeData(color: ColorsUtility().teal100, thickness: 0.8)),
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -40,13 +41,10 @@ class MyApp extends StatelessWidget {
   }
 
   SizedBox dividerLine() {
-    return SizedBox(
+    return const SizedBox(
       height: 20.0,
       width: 250.0,
-      child: Divider(
-        color: ColorsUtility().teal100,
-        thickness: 0.8,
-      ),
+      child: Divider(),
     );
   }
 }
