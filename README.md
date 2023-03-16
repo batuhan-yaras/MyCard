@@ -15,5 +15,5 @@ In which dart file we used the Font Awesome Icons.<br>
 <img src="/images/MyCardInterface.png" width = 400px>
 
 - There is no complicated functions in this app.<br>
-- You can find the main.dart and the other dart files we coded inside of the lib folder.<br>
+- You can find the main.dart and the core folder which has the other codes inside of the lib folder.<br>
 
