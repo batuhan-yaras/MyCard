@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mi_card_flutter/product/card_text_style.dart';
+import 'package:mi_card_flutter/core/all_classes.dart';
 import 'package:mi_card_flutter/core/alert_dialog.dart';
-import 'package:mi_card_flutter/product/all_classes.dart';
+import 'package:mi_card_flutter/core/texts/card_text_style.dart';
 
 class GithubCard extends StatelessWidget {
   const GithubCard({super.key, required this.githubUrl});
@@ -26,7 +26,7 @@ class GithubCard extends StatelessWidget {
         child: ListTile(
           leading: Icon(
             FontAwesomeIcons.github,
-            color: ColorsUtility().teal800,
+            color: ColorsUtility().cardTextColor,
           ),
           title: Text(
             githubUrl,

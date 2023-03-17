@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mi_card_flutter/product/about_text.dart';
-import 'package:mi_card_flutter/product/avatar_image.dart';
-import 'package:mi_card_flutter/core/github_card.dart';
-import 'package:mi_card_flutter/core/linkedin_card.dart';
-import 'package:mi_card_flutter/core/mail_card.dart';
-import 'package:mi_card_flutter/product/name_text.dart';
-import 'package:mi_card_flutter/product/all_classes.dart';
+import 'package:mi_card_flutter/core/all_classes.dart';
+import 'package:mi_card_flutter/core/avatar_image.dart';
+import 'package:mi_card_flutter/core/cards/github_card.dart';
+import 'package:mi_card_flutter/core/cards/linkedin_card.dart';
+import 'package:mi_card_flutter/core/cards/mail_card.dart';
+import 'package:mi_card_flutter/core/texts/about_text.dart';
+import 'package:mi_card_flutter/core/texts/name_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
           cardTheme: const CardTheme(
               margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0)),
-          dividerTheme:
-              DividerThemeData(color: ColorsUtility().teal100, thickness: 0.8)),
+          dividerTheme: DividerThemeData(
+              color: ColorsUtility().aboutTextcolor, thickness: 0.8)),
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(

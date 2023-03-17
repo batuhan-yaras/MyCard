@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ColorsUtility {
-  final Color? teal100 = Colors.teal[100];
-  final Color? teal800 = Colors.teal[800];
+  final Color? aboutTextcolor = Colors.teal[100];
+  final Color? cardTextColor = Colors.teal[800];
 }
 
 class AllNames {

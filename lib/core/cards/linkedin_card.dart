@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mi_card_flutter/product/card_text_style.dart';
+import 'package:mi_card_flutter/core/all_classes.dart';
 import 'package:mi_card_flutter/core/alert_dialog.dart';
-import 'package:mi_card_flutter/product/all_classes.dart';
+import 'package:mi_card_flutter/core/texts/card_text_style.dart';
 
 class LinkedinCard extends StatelessWidget {
   const LinkedinCard({super.key, required this.linkedinUrl});
@@ -28,7 +28,7 @@ class LinkedinCard extends StatelessWidget {
           child: ListTile(
             leading: Icon(
               FontAwesomeIcons.linkedin,
-              color: ColorsUtility().teal800,
+              color: ColorsUtility().cardTextColor,
             ),
             title: Text(
               linkedinUrl,

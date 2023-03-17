@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mi_card_flutter/product/card_text_style.dart';
+import 'package:mi_card_flutter/core/all_classes.dart';
+import 'package:mi_card_flutter/core/texts/card_text_style.dart';
 import 'package:mi_card_flutter/core/alert_dialog.dart';
-import 'package:mi_card_flutter/product/all_classes.dart';
 
 class MailCard extends StatelessWidget {
   const MailCard({super.key, required this.mail});
@@ -27,7 +27,7 @@ class MailCard extends StatelessWidget {
           child: ListTile(
             leading: Icon(
               Icons.email,
-              color: ColorsUtility().teal800,
+              color: ColorsUtility().cardTextColor,
             ),
             title: Text(
               mail,
