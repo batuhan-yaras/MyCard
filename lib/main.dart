@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mi_card_flutter/core/about_text.dart';
-import 'package:mi_card_flutter/core/avatar_image.dart';
+import 'package:mi_card_flutter/product/about_text.dart';
+import 'package:mi_card_flutter/product/avatar_image.dart';
 import 'package:mi_card_flutter/core/github_card.dart';
 import 'package:mi_card_flutter/core/linkedin_card.dart';
 import 'package:mi_card_flutter/core/mail_card.dart';
-import 'package:mi_card_flutter/core/name_text.dart';
+import 'package:mi_card_flutter/product/name_text.dart';
+import 'package:mi_card_flutter/product/all_classes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
           cardTheme: const CardTheme(
               margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0)),
@@ -47,29 +49,4 @@ class MyApp extends StatelessWidget {
       child: Divider(),
     );
   }
-}
-
-class ColorsUtility {
-  final Color? teal100 = Colors.teal[100];
-  final Color? teal800 = Colors.teal[800];
-}
-
-class AllNames {
-  final String batuhanyaras = 'Batuhan Yaraş';
-}
-
-class AllAbout {
-  final String batuhanyaras = 'Yildiz Technical University';
-}
-
-class AllMails {
-  final String batuhanyaras = 'batuhanyaras@yahoo.com';
-}
-
-class AllLinkedinUrl {
-  final String batuhanyaras = 'linkedin.com/in/batuhanyaras';
-}
-
-class AllGithubUrl {
-  final String batuhanyaras = 'github.com/batuhan-yaras';
 }
